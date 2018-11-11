@@ -19,5 +19,12 @@ public class UserAddressDetailsContoller {
 		return addressDetails.getAddressDetails(id);
 	}
 	
+	@GetMapping(value="/address/{name}")
+	public AddressDetailsEntity getAddressDetailsById(@PathVariable(name="name") int name)
+	{
+		
+		return addressDetails.getAddressDetails(name);
+	}
+	
 
 }
